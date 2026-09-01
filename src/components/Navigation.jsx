@@ -6,11 +6,9 @@ function Navigation () {
             <h1>POLIFOLIO</h1>
             <ul className="nav-links">
                 <Link to="/">Home</Link>
-                <Link to="/about-b">
-                 About
-                </Link>
+                <Link to="/about">About</Link>
                 <Link to="/projects">Projects</Link>
-                <li><a href="#getintouch">Get In Touch</a></li>
+                <button><li><a href="#getintouch">Get In Touch</a></li></button>
             </ul>
         </nav>
     )
