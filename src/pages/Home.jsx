@@ -4,6 +4,7 @@ import Footer from "../components/Footer"
 import heroImage from "../assets/WhatsApp Image 2026-09-11 at 08.49.13.jpeg"
 import meImage from "../assets/brand.jpeg"
 import plantImage from "../assets/plantain.jpeg"
+import polyImage from "../assets/me.jpeg"
 import moleculeImage from "../assets/molecule.png"
 import videoAsset from "../assets/video.mp4"
 import "../styles/Home.css"
@@ -57,7 +58,7 @@ function Home() {
                         </div>
                     </div>
                     <figure className="creative-intro__portrait">
-                        <img src={meImage} alt="Polycarp Prince Olupot outdoors" />
+                        <img src={polyImage} alt="Polycarp Prince Olupot outdoors" />
                         <figcaption>Polycarp Prince Olupot</figcaption>
                     </figure>
                 </div>
