@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom"
 import Navigation from "../components/Navigation"
 import Footer from "../components/Footer"
+import MyApproach from "../components/MyApproach"
+import Contact from "../components/Contact"
 import heroImage from "../assets/WhatsApp Image 2026-09-11 at 08.49.13.jpeg"
 import meImage from "../assets/brand.jpeg"
 import plantImage from "../assets/plantain.jpeg"
@@ -18,7 +20,7 @@ function Home() {
                 <div className="home-hero__overlay" />
                 <div className="home-hero__content">
                     <p className="home-hero__eyebrow">Welcome To Poly's World</p>
-                    <h1>Hi, I'm Polycarp Prince Olupot</h1>
+                    <h1>Hi, I'm<br />Polycarp<br />Prince Olupot</h1>
                     <h2>Web Designer &amp; Developer, Content Creator &amp; Video Editor, Graphic Designer</h2>
                     <p className="home-hero__intro">
                         I create modern, responsive and user-friendly digital experiences.
@@ -83,7 +85,6 @@ function Home() {
                             <p className="selected-work-meta"><span>01</span> WEB DESIGN</p>
                             <h3>Molecule Restaurant</h3>
                             <p>Restaurant website design &amp; development</p>
-                            <span className="selected-work-arrow" aria-hidden="true">↗</span>
                         </div>
                     </Link>
                     <Link className="selected-work-card selected-work-card--portrait" to="/projects">
@@ -94,7 +95,6 @@ function Home() {
                             <p className="selected-work-meta"><span>02</span> BRANDING</p>
                             <h3>Polyshotz</h3>
                             <p>Visual identity &amp; creative direction</p>
-                            <span className="selected-work-arrow" aria-hidden="true">↗</span>
                         </div>
                     </Link>
                     <Link className="selected-work-card selected-work-card--wide" to="/projects">
@@ -105,7 +105,6 @@ function Home() {
                             <p className="selected-work-meta"><span>03</span> CONTENT</p>
                             <h3>Social Media Content</h3>
                             <p>Creative content &amp; visual design</p>
-                            <span className="selected-work-arrow" aria-hidden="true">↗</span>
                         </div>
                     </Link>
                     <Link className="selected-work-card selected-work-card--video" to="/projects">
@@ -116,11 +115,12 @@ function Home() {
                             <p className="selected-work-meta"><span>04</span> VIDEO</p>
                             <h3>Video Editing</h3>
                             <p>Short-form video &amp; promotional content</p>
-                            <span className="selected-work-arrow" aria-hidden="true">↗</span>
                         </div>
                     </Link>
                 </div>
             </section>
+            <MyApproach />
+            <Contact />
             <Footer />
         </>
     )

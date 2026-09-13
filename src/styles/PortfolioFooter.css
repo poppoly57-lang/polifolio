@@ -1,0 +1,107 @@
+.portfolio-footer {
+    --portfolio-footer-ink: #f1f5f1;
+    --portfolio-footer-muted: rgba(241, 245, 241, 0.64);
+    --portfolio-footer-line: rgba(241, 245, 241, 0.2);
+    padding: 48px 24px 28px;
+    background: #101610;
+    color: var(--portfolio-footer-ink);
+}
+
+.portfolio-footer-inner {
+    width: min(100%, 1180px);
+    margin: 0 auto;
+}
+
+.portfolio-footer-main {
+    display: grid;
+    grid-template-columns: minmax(220px, 1fr) auto;
+    gap: 48px;
+    align-items: start;
+    padding-bottom: 42px;
+}
+
+.portfolio-footer-brand {
+    display: inline-block;
+    color: var(--portfolio-footer-ink);
+    font-family: "Montserrat SemiBold", sans-serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    line-height: 1;
+    text-decoration: none;
+}
+
+.portfolio-footer-description {
+    margin: 14px 0 0;
+    color: var(--portfolio-footer-muted);
+    font-family: "Dm Sans", sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.portfolio-footer-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 12px 28px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.portfolio-footer-nav a {
+    color: var(--portfolio-footer-ink);
+    font-family: "Inter SemiBold", sans-serif;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-decoration: none;
+    transition: color 180ms ease;
+}
+
+.portfolio-footer-nav a:hover {
+    color: #f4c84b;
+}
+
+.portfolio-footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    padding-top: 20px;
+    border-top: 1px solid var(--portfolio-footer-line);
+}
+
+.portfolio-footer-bottom p {
+    margin: 0;
+    color: var(--portfolio-footer-muted);
+    font-family: "Dm Sans", sans-serif;
+    font-size: 0.8rem;
+    line-height: 1.5;
+}
+
+@media (max-width: 700px) {
+    .portfolio-footer {
+        padding: 40px 16px 24px;
+    }
+
+    .portfolio-footer-main {
+        display: block;
+        padding-bottom: 32px;
+    }
+
+    .portfolio-footer-nav {
+        justify-content: flex-start;
+        gap: 16px 22px;
+        margin-top: 32px;
+    }
+
+    .portfolio-footer-nav a {
+        display: inline-flex;
+        min-height: 40px;
+        align-items: center;
+    }
+
+    .portfolio-footer-bottom {
+        display: block;
+    }
+}

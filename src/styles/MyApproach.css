@@ -1,0 +1,205 @@
+.my-approach-section {
+    --my-approach-ink: #182119;
+    --my-approach-muted: rgba(12, 17, 12, 0.836);
+    --my-approach-line: rgba(24, 33, 25, 0.2);
+    padding: 128px 24px 136px;
+    overflow: hidden;
+    background: #dfbb68;
+    color: var(--my-approach-ink);
+}
+
+.my-approach-header,
+.my-approach-steps {
+    width: min(100%, 1180px);
+    margin: 0 auto;
+}
+
+.my-approach-header {
+    display: grid;
+    grid-template-columns: minmax(150px, 0.35fr) minmax(0, 1fr);
+    gap: clamp(40px, 8vw, 136px);
+    align-items: start;
+}
+
+.my-approach-label {
+    margin: 0;
+    padding-top: 12px;
+    font-family: "Montserrat Bold", sans-serif;
+    font-size: 0.88rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    line-height: 1.2;
+}
+
+.my-approach-content {
+    max-width: 780px;
+}
+
+.my-approach-content h2 {
+    max-width: 760px;
+    margin: 0;
+    font-family: "Playfair Display", serif;
+    font-size: clamp(3rem, 6.2vw, 6.8rem);
+    font-weight: 700;
+    letter-spacing: -0.035em;
+    line-height: 0.98;
+}
+
+.my-approach-content > p {
+    max-width: 620px;
+    margin: 32px 0 0;
+    color: var(--my-approach-muted);
+    font-family: "Dm Sans", sans-serif;
+    font-size: clamp(1rem, 1.45vw, 1.15rem);
+    line-height: 1.7;
+}
+
+.my-approach-divider {
+    width: min(100%, 1180px);
+    height: 1px;
+    margin: 92px auto 0;
+    background: var(--my-approach-line);
+}
+
+.my-approach-steps {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px;
+    margin-top: 28px;
+}
+
+.my-approach-step {
+    min-width: 0;
+    padding: 24px 28px 0 0;
+    border-top: 1px solid var(--my-approach-line);
+}
+
+.my-approach-title {
+    margin: 0;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: clamp(1.2rem, 1.8vw, 1.55rem);
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    line-height: 1.1;
+}
+
+.my-approach-description {
+    max-width: 310px;
+    margin: 16px 0 0;
+    color: var(--my-approach-muted);
+    font-family: "Dm Sans", sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.my-approach-label,
+.my-approach-content,
+.my-approach-divider,
+.my-approach-step {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity 650ms ease, transform 650ms ease;
+}
+
+.my-approach-divider {
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+.my-approach-step:nth-child(2) {
+    transition-delay: 100ms;
+}
+
+.my-approach-step:nth-child(3) {
+    transition-delay: 200ms;
+}
+
+.my-approach-section--visible .my-approach-label,
+.my-approach-section--visible .my-approach-content,
+.my-approach-section--visible .my-approach-divider,
+.my-approach-section--visible .my-approach-step {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.my-approach-section--visible .my-approach-divider {
+    transform: scaleX(1);
+}
+
+@media (max-width: 900px) {
+    .my-approach-section {
+        padding: 96px 24px 104px;
+    }
+
+    .my-approach-header {
+        grid-template-columns: minmax(120px, 0.3fr) minmax(0, 1fr);
+        gap: 40px;
+    }
+
+    .my-approach-divider {
+        margin-top: 72px;
+    }
+
+    .my-approach-step {
+        padding-right: 12px;
+    }
+}
+
+@media (max-width: 700px) {
+    .my-approach-section {
+        padding: 76px 16px 84px;
+    }
+
+    .my-approach-header {
+        display: block;
+    }
+
+    .my-approach-label {
+        padding-top: 0;
+    }
+
+    .my-approach-content {
+        margin-top: 32px;
+    }
+
+    .my-approach-content h2 {
+        font-size: clamp(2.7rem, 13vw, 4.5rem);
+    }
+
+    .my-approach-content > p {
+        margin-top: 24px;
+        font-size: 1rem;
+    }
+
+    .my-approach-divider {
+        margin-top: 56px;
+    }
+
+    .my-approach-steps {
+        display: block;
+        margin-top: 0;
+    }
+
+    .my-approach-step {
+        padding: 24px 0 28px;
+    }
+
+    .my-approach-step + .my-approach-step {
+        margin-top: 0;
+    }
+
+    .my-approach-number {
+        margin-bottom: 28px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .my-approach-label,
+    .my-approach-content,
+    .my-approach-divider,
+    .my-approach-step {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}

@@ -21,7 +21,7 @@ function Navigation() {
         <nav className={`navigation${isScrolled ? " navigation--scrolled" : ""}`}>
             <div className="navigation__inner">
                 <NavLink className="navigation__brand" to="/" onClick={closeMenu}>
-                    POLIFOLIO
+                    POLYFOLY
                 </NavLink>
                 <button
                     className={`navigation__toggle${isMenuOpen ? " navigation__toggle--open" : ""}`}
