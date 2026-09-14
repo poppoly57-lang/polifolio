@@ -29,9 +29,9 @@ function Home() {
                         <Link className="home-hero__button home-hero__button--primary" to="/projects">
                             View My Work
                         </Link>
-                        <a className="home-hero__button home-hero__button--secondary" href="#getintouch">
+                        <Link className="home-hero__button home-hero__button--secondary" to="/contact">
                             Let's Work Together
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </main>

@@ -1,4 +1,5 @@
 import "../styles/Contact.css"
+import { Link } from "react-router-dom"
 
 function Contact() {
     return (
@@ -16,9 +17,9 @@ function Contact() {
                         Whether you need a website, graphic design, content creation or video editing, I’d love to hear what you’re
                         working on and see how I can help.
                     </p>
-                    <a className="contact-button" href="#getintouch">
+                    <Link className="contact-button" to="/contact">
                         GET IN TOUCH <span aria-hidden="true">→</span>
-                    </a>
+                    </Link>
                 </div>
             </div>
         </section>

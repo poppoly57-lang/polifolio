@@ -17,7 +17,7 @@ function Footer() {
                             <li><NavLink to="/">Home</NavLink></li>
                             <li><NavLink to="/about-b">About</NavLink></li>
                             <li><NavLink to="/projects">Projects</NavLink></li>
-                            <li><a href="#getintouch">Get In Touch</a></li>
+                            <li><NavLink to="/contact">Get In Touch</NavLink></li>
                         </ul>
                     </nav>
                 </div>

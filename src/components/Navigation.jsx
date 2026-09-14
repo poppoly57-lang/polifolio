@@ -21,7 +21,7 @@ function Navigation() {
         <nav className={`navigation${isScrolled ? " navigation--scrolled" : ""}`}>
             <div className="navigation__inner">
                 <NavLink className="navigation__brand" to="/" onClick={closeMenu}>
-                    POLYFOLY
+                    POLYFOLIO
                 </NavLink>
                 <button
                     className={`navigation__toggle${isMenuOpen ? " navigation__toggle--open" : ""}`}
@@ -42,7 +42,7 @@ function Navigation() {
                     <li><NavLink to="/" onClick={closeMenu}>Home</NavLink></li>
                     <li><NavLink to="/about-b" onClick={closeMenu}>About</NavLink></li>
                     <li><NavLink to="/projects" onClick={closeMenu}>Projects</NavLink></li>
-                    <li><a href="#getintouch" onClick={closeMenu}>Get In Touch</a></li>
+                    <li><NavLink to="/contact" onClick={closeMenu}>Get In Touch</NavLink></li>
                 </ul>
             </div>
         </nav>
