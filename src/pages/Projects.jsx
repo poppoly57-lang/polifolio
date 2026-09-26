@@ -41,7 +41,7 @@ function ProjectCard({ project, index }) {
         <article className={`project-card${project.featured ? " project-card--featured" : ""}`}>
             <a className="project-card__image-link" href={project.url} target="_blank" rel="noopener noreferrer" aria-label={`View ${project.name} website`}>
                 <div className="project-card__image-frame">
-                    <img src={project.image} alt={project.imageAlt} />
+                    <img src={project.image} alt={project.imageAlt} loading={project.featured ? "eager" : "lazy"} decoding="async" />
                     <span className="project-card__number" aria-hidden="true">0{index + 1}</span>
                 </div>
             </a>

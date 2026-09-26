@@ -16,7 +16,7 @@ function Home() {
         <>
             <Navigation />
             <main className="home-hero">
-                <img className="home-hero__image" src={heroImage} alt="Polycarp Prince outdoors" />
+                <img className="home-hero__image" src={heroImage} alt="Polycarp Prince outdoors" fetchpriority="high" />
                 <div className="home-hero__overlay" />
                 <div className="home-hero__content">
                     <p className="home-hero__eyebrow">Welcome To Poly's World</p>
@@ -60,7 +60,7 @@ function Home() {
                         </div>
                     </div>
                     <figure className="creative-intro__portrait">
-                        <img src={polyImage} alt="Polycarp Prince Olupot outdoors" />
+                        <img src={polyImage} alt="Polycarp Prince Olupot outdoors" loading="lazy" decoding="async" />
                         <figcaption>Polycarp Prince Olupot</figcaption>
                     </figure>
                 </div>
@@ -79,7 +79,7 @@ function Home() {
                 <div className="selected-work-grid">
                     <Link className="selected-work-card selected-work-card--featured" to="/projects">
                         <div className="selected-work-image-wrap">
-                            <img className="selected-work-image" src={moleculeImage} alt="Molecule Restaurant website project" />
+                            <img className="selected-work-image" src={moleculeImage} alt="Molecule Restaurant website project" loading="lazy" decoding="async" />
                         </div>
                         <div className="selected-work-content">
                             <p className="selected-work-meta"><span>01</span> WEB DESIGN</p>
@@ -89,7 +89,7 @@ function Home() {
                     </Link>
                     <Link className="selected-work-card selected-work-card--portrait" to="/projects">
                         <div className="selected-work-image-wrap">
-                            <img className="selected-work-image" src={meImage} alt="Polyshotz visual identity project" />
+                            <img className="selected-work-image" src={meImage} alt="Polyshotz visual identity project" loading="lazy" decoding="async" />
                         </div>
                         <div className="selected-work-content">
                             <p className="selected-work-meta"><span>02</span> BRANDING</p>
@@ -99,7 +99,7 @@ function Home() {
                     </Link>
                     <Link className="selected-work-card selected-work-card--wide" to="/projects">
                         <div className="selected-work-image-wrap">
-                            <img className="selected-work-image" src={plantImage} alt="Social media content project" />
+                            <img className="selected-work-image" src={plantImage} alt="Social media content project" loading="lazy" decoding="async" />
                         </div>
                         <div className="selected-work-content">
                             <p className="selected-work-meta"><span>03</span> CONTENT</p>
@@ -109,7 +109,7 @@ function Home() {
                     </Link>
                     <Link className="selected-work-card selected-work-card--video" to="/projects">
                         <div className="selected-work-image-wrap">
-                            <video className="selected-work-image" src={videoAsset} autoPlay muted loop playsInline aria-label="Video editing project" />
+                            <video className="selected-work-image" src={videoAsset} controls preload="none" muted loop playsInline aria-label="Video editing project" />
                         </div>
                         <div className="selected-work-content">
                             <p className="selected-work-meta"><span>04</span> VIDEO</p>

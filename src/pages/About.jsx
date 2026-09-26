@@ -22,7 +22,12 @@ function About() {
                             </div>
                             <div className="about-detail">
                                 <p className="about-detail-label">I WORK IN</p>
-                                <p className="about-detail-value"> ·  Web Development <br /> ·  Graphic Design <br /> ·  Content Creation <br /> · Video Editing</p>
+                                <ul className="about-detail-value about-detail-services">
+                                    <li>Web Development</li>
+                                    <li>Graphic Design</li>
+                                    <li>Content Creation</li>
+                                    <li>Video Editing</li>
+                                </ul>
                             </div>
                             <div className="about-detail">
                                 <p className="about-detail-label">OPEN TO</p>
