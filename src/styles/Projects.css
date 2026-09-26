@@ -59,6 +59,11 @@
 
 .project-card {
     min-width: 0;
+    overflow: hidden;
+    border: 1px solid rgba(24, 33, 25, 0.12);
+    border-radius: 10px;
+    background: #fbfaf5;
+    box-shadow: 0 10px 28px rgba(24, 33, 25, 0.06);
 }
 
 .project-card--featured {
@@ -73,6 +78,10 @@
 .project-card__image-frame {
     display: block;
     overflow: hidden;
+}
+
+.project-card__image-link {
+    min-width: 0;
 }
 
 .project-card__image-frame {
@@ -90,7 +99,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 500ms ease;
+    transition: transform 280ms ease;
 }
 
 .project-card:nth-child(2) .project-card__image-frame img {
@@ -105,7 +114,12 @@
 
 .project-card__image-link:hover img,
 .project-card__image-link:focus-visible img {
-    transform: scale(1.04);
+    transform: scale(1.025);
+}
+
+.project-card__image-link:focus-visible {
+    outline: 3px solid var(--projects-accent);
+    outline-offset: -3px;
 }
 
 .project-card__number {
@@ -125,7 +139,8 @@
 }
 
 .project-card__content {
-    padding-top: 24px;
+    min-width: 0;
+    padding: 24px;
 }
 
 .project-card__category {
@@ -134,10 +149,9 @@
 
 .project-card h2 {
     margin: 13px 0 0;
-    font-family: "Montserrat Bold", sans-serif;
+    font-family: "Gotham Rounded", "Arial Rounded MT Bold", sans-serif;
     font-size: clamp(1.55rem, 2.8vw, 2.8rem);
     font-weight: 700;
-    letter-spacing: -0.025em;
     line-height: 1.05;
 }
 
@@ -155,7 +169,7 @@
     align-items: center;
     justify-content: space-between;
     gap: 18px;
-    margin-top: 26px;
+    margin-top: 24px;
     padding-top: 18px;
     border-top: 1px solid var(--projects-line);
 }
@@ -169,14 +183,20 @@
 .project-card__link {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 10px;
-    color: var(--projects-ink);
+    min-height: 44px;
+    padding: 0 16px;
+    border: 1px solid var(--projects-ink);
+    border-radius: 5px;
+    background: var(--projects-ink);
+    color: #f1f0e9;
     font-family: "Montserrat SemiBold", sans-serif;
     font-size: 0.76rem;
     font-weight: 600;
     letter-spacing: 0.04em;
     text-decoration: none;
-    transition: color 180ms ease, gap 180ms ease;
+    transition: color 180ms ease, background-color 180ms ease, border-color 180ms ease;
 }
 
 .project-card__link span {
@@ -185,8 +205,14 @@
 
 .project-card__link:hover,
 .project-card__link:focus-visible {
-    gap: 14px;
-    color: #9a6c00;
+    border-color: var(--projects-accent);
+    background: var(--projects-accent);
+    color: var(--projects-ink);
+}
+
+.project-card__link:focus-visible {
+    outline: 3px solid rgba(24, 33, 25, 0.55);
+    outline-offset: 3px;
 }
 
 @media (max-width: 760px) {
@@ -221,14 +247,17 @@
         aspect-ratio: 4 / 3;
     }
 
+    .project-card__content {
+        padding: 20px;
+    }
+
     .project-card h2 {
         font-size: clamp(1.7rem, 8vw, 2.5rem);
     }
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .project-card__image-frame img,
-    .project-card__link {
+    .project-card__image-frame img {
         transition: none;
     }
 }
