@@ -25,6 +25,7 @@ function ContactPage() {
 
     const handleSubmit = async (event) => {
         event.preventDefault()
+        if (submissionState === "submitting") return
         const errors = {}
 
         if (!formValues.fullName.trim()) errors.fullName = "Please enter your name."
@@ -76,34 +77,36 @@ function ContactPage() {
         <>
             <Navigation />
             <main className="contact-page">
-                <section className="contact-page-intro" aria-labelledby="contact-page-title">
-                    <p className="contact-page-label">GET IN TOUCH</p>
-                    <h1 className="contact-page-title" id="contact-page-title">Let&apos;s create something together.</h1>
-                    <p className="contact-page-description">
-                        Have a project in mind, a new idea you want to explore, or simply want to talk about what you&apos;re working on? Tell me a little about it and I&apos;ll get back to you.
-                    </p>
-                </section>
                 <section className="contact-page-workspace" aria-label="Contact details and project inquiry">
-                    <div className="contact-page-information">
-                        <div className="contact-page-info-group">
-                            <p className="contact-page-info-label">BASED IN</p>
-                            <p className="contact-page-info-value">Kampala, Uganda</p>
+                    <div className="contact-page-aside">
+                        <div className="contact-page-intro">
+                            <p className="contact-page-label">GET IN TOUCH</p>
+                            <h1 className="contact-page-title" id="contact-page-title">Let&apos;s Work Together</h1>
+                            <p className="contact-page-description">
+                                Have a project in mind? Tell me what you&apos;re working on and we can talk through how to bring it to life.
+                            </p>
                         </div>
-                        <div className="contact-page-info-group">
-                            <p className="contact-page-info-label">AVAILABLE FOR</p>
-                            <p className="contact-page-info-value">New projects &amp; collaborations</p>
-                        </div>
-                        <div className="contact-page-info-group">
-                            <p className="contact-page-info-label">PROJECTS I WORK ON</p>
-                            <ul className="contact-page-project-list">
-                                <li>Web Design</li>
-                                <li>Content Creation</li>
-                                <li>Video Editing</li>
-                                <li>Graphic Design</li>
-                            </ul>
+                        <div className="contact-page-information">
+                            <div className="contact-page-info-group">
+                                <p className="contact-page-info-label"><span aria-hidden="true">⌖</span> BASED IN</p>
+                                <p className="contact-page-info-value">Kampala, Uganda</p>
+                            </div>
+                            <div className="contact-page-info-group">
+                                <p className="contact-page-info-label"><span aria-hidden="true">↗</span> AVAILABLE FOR</p>
+                                <p className="contact-page-info-value">New projects &amp; collaborations</p>
+                            </div>
+                            <div className="contact-page-info-group">
+                                <p className="contact-page-info-label"><span aria-hidden="true">✳</span> PROJECTS I WORK ON</p>
+                                <ul className="contact-page-project-list">
+                                    <li>Web Design</li>
+                                    <li>Content Creation</li>
+                                    <li>Video Editing</li>
+                                    <li>Graphic Design</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                    <form className="contact-page-form" onSubmit={handleSubmit} noValidate>
+                    <form className="contact-page-form" onSubmit={handleSubmit} noValidate aria-busy={submissionState === "submitting"}>
                         <div className="contact-page-form-heading">
                             <p className="contact-page-form-number">01</p>
                             <h2 className="contact-page-form-title">YOUR DETAILS</h2>
@@ -111,12 +114,12 @@ function ContactPage() {
                         <div className="contact-page-fields">
                             <div className="contact-page-field">
                                 <label className="contact-page-field-label" htmlFor="contact-full-name">FULL NAME</label>
-                                <input className="contact-page-input" id="contact-full-name" name="fullName" type="text" placeholder="Your name" value={formValues.fullName} onChange={handleChange} required aria-invalid={Boolean(formErrors.fullName)} aria-describedby={formErrors.fullName ? "contact-full-name-error" : undefined} />
+                                <input className="contact-page-input" id="contact-full-name" name="fullName" type="text" autoComplete="name" placeholder="Your name" value={formValues.fullName} onChange={handleChange} required aria-invalid={Boolean(formErrors.fullName)} aria-describedby={formErrors.fullName ? "contact-full-name-error" : undefined} />
                                 {formErrors.fullName && <p className="contact-page-error" id="contact-full-name-error">{formErrors.fullName}</p>}
                             </div>
                             <div className="contact-page-field">
                                 <label className="contact-page-field-label" htmlFor="contact-email">EMAIL ADDRESS</label>
-                                <input className="contact-page-input" id="contact-email" name="email" type="email" placeholder="you@example.com" value={formValues.email} onChange={handleChange} required aria-invalid={Boolean(formErrors.email)} aria-describedby={formErrors.email ? "contact-email-error" : undefined} />
+                                <input className="contact-page-input" id="contact-email" name="email" type="email" autoComplete="email" placeholder="you@example.com" value={formValues.email} onChange={handleChange} required aria-invalid={Boolean(formErrors.email)} aria-describedby={formErrors.email ? "contact-email-error" : undefined} />
                                 {formErrors.email && <p className="contact-page-error" id="contact-email-error">{formErrors.email}</p>}
                             </div>
                         </div>

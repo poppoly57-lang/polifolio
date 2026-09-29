@@ -11,17 +11,17 @@ function About() {
                 <div className="about-intro-container">
                     <div className="about-intro-content">
                         <p className="about-intro-label">ABOUT ME</p>
-                        <h1 className="about-intro-title">I’m a creative who enjoys turning ideas into something real.</h1>
+                        <h1 className="about-intro-title">Turning Ideas Into Digital Solutions</h1>
                         <p className="about-intro-description">
-                            I enjoy exploring ideas, experimenting with different ways of creating, and turning simple concepts into work that has purpose. From building websites to creating visual content, designing graphics and editing videos, I’m always looking for a better way to bring an idea to life.
+                            I&apos;m Polycarp Prince Olupot. I work across web development, content creation and video editing, shaping ideas into clear, useful digital work.
                         </p>
                         <div className="about-details" aria-label="Personal information">
                             <div className="about-detail">
-                                <p className="about-detail-label">BASED IN</p>
+                                <p className="about-detail-label"><span aria-hidden="true">⌖</span> BASED IN</p>
                                 <p className="about-detail-value">Kampala, Uganda</p>
                             </div>
                             <div className="about-detail">
-                                <p className="about-detail-label">I WORK IN</p>
+                                <p className="about-detail-label"><span aria-hidden="true">✳</span> I WORK IN</p>
                                 <ul className="about-detail-value about-detail-services">
                                     <li>Web Development</li>
                                     <li>Graphic Design</li>
@@ -30,7 +30,7 @@ function About() {
                                 </ul>
                             </div>
                             <div className="about-detail">
-                                <p className="about-detail-label">OPEN TO</p>
+                                <p className="about-detail-label"><span aria-hidden="true">↗</span> OPEN TO</p>
                                 <p className="about-detail-value">New projects &amp; collaborations</p>
                             </div>
                         </div>
@@ -44,41 +44,6 @@ function About() {
                     </figure>
                 </div>
             </main>
-            <section className="about-more" aria-labelledby="about-more-title">
-                <div className="about-more-container">
-                    <div className="about-more-content">
-                        <p className="about-more-label">MORE ABOUT ME</p>
-                        <h2 className="about-more-title" id="about-more-title">More than just the final result.</h2>
-                        <div className="about-more-copy">
-                            <p>I enjoy exploring ideas, experimenting with different ways of creating, and turning simple concepts into work that has purpose using different tools and techniques.</p>
-                            <p>Whether I’m building a website, creating visual content or editing a video, I’m always interested in the process behind the final result — understanding the idea, finding what works and refining the details until everything feels right.</p>
-                        </div>
-                    </div>
-                    <div className="about-more-points" aria-label="Creative principles">
-                        <article className="about-more-point">
-                            <p className="about-more-point-number">01</p>
-                            <div>
-                                <h3 className="about-more-point-title">CURIOUS BY NATURE</h3>
-                                <p className="about-more-point-text">Always exploring new ideas, tools and creative approaches.</p>
-                            </div>
-                        </article>
-                        <article className="about-more-point">
-                            <p className="about-more-point-number">02</p>
-                            <div>
-                                <h3 className="about-more-point-title">DETAIL MATTERS</h3>
-                                <p className="about-more-point-text">Small decisions can make a big difference in the final result.</p>
-                            </div>
-                        </article>
-                        <article className="about-more-point">
-                            <p className="about-more-point-number">03</p>
-                            <div>
-                                <h3 className="about-more-point-title">KEEP IT PURPOSEFUL</h3>
-                                <p className="about-more-point-text">Good design should look good, but it should also have a reason.</p>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-            </section>
             <section className="about-skills" aria-labelledby="about-skills-title">
                 <div className="about-skills-container">
                     <div className="about-skills-intro">
@@ -142,6 +107,41 @@ function About() {
                                 </ul>
                             </article>
                         </div>
+                    </div>
+                </div>
+            </section>
+            <section className="about-more" aria-labelledby="about-more-title">
+                <div className="about-more-container">
+                    <div className="about-more-content">
+                        <p className="about-more-label">MORE ABOUT ME</p>
+                        <h2 className="about-more-title" id="about-more-title">More than just the final result.</h2>
+                        <div className="about-more-copy">
+                            <p>I enjoy exploring ideas, experimenting with different ways of creating, and turning simple concepts into work that has purpose using different tools and techniques.</p>
+                            <p>Whether I’m building a website, creating visual content or editing a video, I’m always interested in the process behind the final result — understanding the idea, finding what works and refining the details until everything feels right.</p>
+                        </div>
+                    </div>
+                    <div className="about-more-points" aria-label="Creative principles">
+                        <article className="about-more-point">
+                            <p className="about-more-point-number">01</p>
+                            <div>
+                                <h3 className="about-more-point-title">CURIOUS BY NATURE</h3>
+                                <p className="about-more-point-text">Always exploring new ideas, tools and creative approaches.</p>
+                            </div>
+                        </article>
+                        <article className="about-more-point">
+                            <p className="about-more-point-number">02</p>
+                            <div>
+                                <h3 className="about-more-point-title">DETAIL MATTERS</h3>
+                                <p className="about-more-point-text">Small decisions can make a big difference in the final result.</p>
+                            </div>
+                        </article>
+                        <article className="about-more-point">
+                            <p className="about-more-point-number">03</p>
+                            <div>
+                                <h3 className="about-more-point-title">KEEP IT PURPOSEFUL</h3>
+                                <p className="about-more-point-text">Good design should look good, but it should also have a reason.</p>
+                            </div>
+                        </article>
                     </div>
                 </div>
             </section>

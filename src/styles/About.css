@@ -787,3 +787,335 @@
         margin-top: 48px;
     }
 }
+
+.about-intro,
+.about-more,
+.about-skills,
+.about-approach,
+.about-cta {
+    --about-dark-bg: #081321;
+    --about-dark-surface: #0e1c2d;
+    --about-dark-ink: #f2f5f8;
+    --about-dark-muted: #a8b5c4;
+    --about-dark-line: rgba(195, 211, 228, 0.16);
+    --about-lime: #dbf10e;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.about-intro {
+    --about-intro-ink: var(--about-dark-ink);
+    --about-intro-muted: var(--about-dark-muted);
+    --about-intro-line: var(--about-dark-line);
+    background: var(--about-dark-bg);
+}
+
+.about-intro-label,
+.about-more-label,
+.about-skills-label,
+.about-approach-label,
+.about-cta-label {
+    color: var(--about-lime);
+    font-size: 0.72rem;
+    letter-spacing: 0.15em;
+}
+
+.about-intro-label {
+    margin-bottom: 26px;
+}
+
+.about-intro-title {
+    max-width: 620px;
+    font-size: 3.5rem;
+    letter-spacing: 0;
+    line-height: 1.08;
+}
+
+.about-intro-description {
+    max-width: 540px;
+    margin-top: 24px;
+    color: var(--about-intro-muted);
+    font-size: 1.05rem;
+    line-height: 1.75;
+}
+
+.about-detail-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--about-intro-muted);
+    font-size: 0.68rem;
+    letter-spacing: 0.12em;
+}
+
+.about-detail-label span {
+    display: inline-grid;
+    place-items: center;
+    width: 20px;
+    height: 20px;
+    border: 1px solid rgba(219, 241, 14, 0.45);
+    border-radius: 5px;
+    color: var(--about-lime);
+    font-size: 0.85rem;
+    line-height: 1;
+}
+
+.about-detail-value {
+    color: var(--about-intro-ink);
+    font-size: 0.94rem;
+}
+
+.about-intro-image-wrapper {
+    padding: 10px 10px 0 0;
+}
+
+.about-intro-image-wrapper::after {
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    border-color: rgba(219, 241, 14, 0.34);
+    border-radius: 12px;
+}
+
+.about-intro-image {
+    border: 1px solid var(--about-dark-line);
+    border-radius: 12px;
+}
+
+.about-more {
+    --about-more-ink: var(--about-dark-ink);
+    --about-more-muted: var(--about-dark-muted);
+    --about-more-line: var(--about-dark-line);
+    padding: 88px 24px;
+    background: var(--about-dark-bg);
+    color: var(--about-more-ink);
+}
+
+.about-more-container {
+    gap: clamp(48px, 7vw, 96px);
+}
+
+.about-more-label {
+    margin-bottom: 20px;
+}
+
+.about-more-title {
+    font-size: 2.8rem;
+    letter-spacing: 0;
+    line-height: 1.1;
+}
+
+.about-more-copy {
+    margin-top: 24px;
+    color: var(--about-more-muted);
+    line-height: 1.75;
+}
+
+.about-more-point {
+    transition: padding-left 180ms ease, border-color 180ms ease;
+}
+
+.about-more-point:hover {
+    border-color: var(--about-lime);
+}
+
+.about-more-point-number,
+.about-more-point-text {
+    color: var(--about-more-muted);
+}
+
+.about-more-point-title {
+    color: var(--about-lime);
+}
+
+.about-skills {
+    --about-skills-ink: var(--about-dark-ink);
+    --about-skills-muted: var(--about-dark-muted);
+    --about-skills-line: var(--about-dark-line);
+    padding: 88px 24px;
+    background: var(--about-dark-surface);
+    color: var(--about-skills-ink);
+}
+
+.about-skills-label {
+    margin-bottom: 20px;
+}
+
+.about-skills-title,
+.about-approach-title,
+.about-cta-title {
+    font-size: 2.8rem;
+    letter-spacing: 0;
+    line-height: 1.1;
+}
+
+.about-skills-description {
+    margin-top: 20px;
+    color: var(--about-skills-muted);
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.about-skill-development,
+.about-skill-tools-group {
+    border-color: var(--about-skills-line);
+}
+
+.about-skill-number {
+    color: var(--about-lime);
+}
+
+.about-skill-title {
+    color: var(--about-skills-ink);
+}
+
+.about-skill-bar-label {
+    color: var(--about-skills-ink);
+}
+
+.about-skill-bar-label span:last-child {
+    color: var(--about-skills-muted);
+}
+
+.about-skill-bar-track {
+    background: rgba(195, 211, 228, 0.2);
+}
+
+.about-skill-bar-fill {
+    background: var(--about-lime);
+}
+
+.about-skill-tools-list li {
+    border-color: var(--about-skills-line);
+    color: var(--about-skills-muted);
+}
+
+.about-skill-tool:hover {
+    color: var(--about-skills-ink);
+}
+
+.about-approach {
+    --about-approach-ink: var(--about-dark-ink);
+    --about-approach-muted: var(--about-dark-muted);
+    --about-approach-line: var(--about-dark-line);
+    padding: 88px 24px;
+    background: var(--about-dark-bg);
+    color: var(--about-approach-ink);
+}
+
+.about-approach-item-title {
+    color: var(--about-lime);
+}
+
+.about-cta {
+    --about-cta-ink: var(--about-dark-ink);
+    --about-cta-muted: var(--about-dark-muted);
+    padding: 80px 24px;
+    border-top: 1px solid var(--about-dark-line);
+    background: var(--about-dark-surface);
+    color: var(--about-cta-ink);
+}
+
+.about-cta-label {
+    margin-bottom: 20px;
+}
+
+.about-cta-description {
+    color: var(--about-cta-muted);
+    line-height: 1.7;
+}
+
+.about-cta-button {
+    gap: 12px;
+    padding: 12px 16px;
+    border: 1px solid var(--about-lime);
+    border-radius: 5px;
+    background: var(--about-lime);
+    color: #081321;
+    transition: background-color 160ms ease, color 160ms ease;
+}
+
+.about-cta-button:hover,
+.about-cta-button:focus-visible {
+    gap: 12px;
+    border-color: var(--about-lime);
+    background: transparent;
+    color: var(--about-lime);
+}
+
+.about-cta-button:focus-visible {
+    outline: 2px solid var(--about-dark-ink);
+    outline-offset: 3px;
+}
+
+@media (max-width: 900px) {
+    .about-intro-title {
+        font-size: 2.8rem;
+    }
+
+    .about-more-title,
+    .about-skills-title,
+    .about-approach-title,
+    .about-cta-title {
+        font-size: 2.4rem;
+    }
+}
+
+@media (max-width: 700px) {
+    .about-intro {
+        padding-right: 18px;
+        padding-left: 18px;
+    }
+
+    .about-intro-title {
+        font-size: 2.5rem;
+        line-height: 1.1;
+    }
+
+    .about-intro-label {
+        margin-bottom: 20px;
+    }
+
+    .about-details {
+        gap: 18px;
+        margin-top: 36px;
+    }
+
+    .about-intro-image-wrapper {
+        margin-top: 36px;
+    }
+
+    .about-more,
+    .about-skills,
+    .about-approach,
+    .about-cta {
+        padding: 72px 18px;
+    }
+
+    .about-more-title,
+    .about-skills-title,
+    .about-approach-title,
+    .about-cta-title {
+        font-size: 2.25rem;
+    }
+
+    .about-more-points,
+    .about-approach-list {
+        margin-top: 40px;
+    }
+
+    .about-skills-layout {
+        margin-top: 40px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .about-more-point,
+    .about-skill-tool,
+    .about-cta-button {
+        transition: none;
+    }
+
+    .about-skill-bar-fill {
+        animation: none;
+    }
+}
